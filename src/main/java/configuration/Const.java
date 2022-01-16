@@ -7,6 +7,6 @@ public class Const {
     public static final int SHORT_TIMEOUT_IN_SECOND = 1;
     public static final int MEDIUM_TIMEOUT_IN_SECOND = 10;
     public static final int LARGE_TIMEOUT_IN_SECOND = 30;
-    public static final String BROWSER_NAME = BrowserType.FIREFOX;
+//    public static final String BROWSER_NAME = BrowserType.FIREFOX;
     public static final int PAGING_NUMBER = 16;
 }

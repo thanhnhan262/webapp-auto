@@ -1,13 +1,13 @@
+package testClasses;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import util.DriverFactory;
 
-public class TestClass {
+public class ReportTest{
 
     @Test
     public void testReport() {
@@ -48,11 +48,5 @@ public class TestClass {
         extent.attachReporter(spark);
         ExtentTest logger = extent.createTest("MyFirstTest");
         logger.log(Status.PASS, "This is a logging event for MyFirstTest, and it passed!");
-    }
-
-    @Test
-    public void openGooglePage(){
-        WebDriver driver = DriverFactory.getWebDriver();
-        driver.get("https://google.com");
     }
 }

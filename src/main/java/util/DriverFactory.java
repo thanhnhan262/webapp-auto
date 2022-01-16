@@ -1,7 +1,6 @@
 package util;
 
 import configuration.BrowserType;
-import configuration.Const;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.config.WebDriverManagerException;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +24,6 @@ public class DriverFactory {
                 break;
             case BrowserType.FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
-//                System.setProperty("webdriver.gecko.driver", "C:\\Users\\Duong\\.cache\\selenium\\geckodriver\\win32\\0.26.0\\geckodriver.exe");
                 webDriver = new FirefoxDriver();
                 break;
             case BrowserType.EDGE:
@@ -35,15 +33,14 @@ public class DriverFactory {
             default:
                 throw new WebDriverManagerException("Browser is not supported: " + browserName);
         }
+        webDrivers.put(Thread.currentThread().getId(), webDriver);
         return webDriver;
     }
 
     static public synchronized WebDriver getWebDriver() {
         WebDriver currentDriver = webDrivers.get(Thread.currentThread().getId());
         if(currentDriver == null) {
-            WebDriver newDriver = DriverFactory.createWebDriver(Const.BROWSER_NAME);
-            webDrivers.put(Thread.currentThread().getId(), newDriver);
-            return newDriver;
+            throw new WebDriverManagerException("Browser is not started yet!");
         }
         return currentDriver;
     }

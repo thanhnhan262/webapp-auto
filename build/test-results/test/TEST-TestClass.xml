@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestClass" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-26T16:57:18" hostname="NHANDUONG" time="8.803">
+<testsuite name="TestClass" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-15T05:56:05" hostname="NhanMac.local" time="8.796">
   <properties/>
-  <testcase name="openGooglePage" classname="TestClass" time="8.803"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-1627318639807	geckodriver	INFO	Listening on 127.0.0.1:36242
-1627318641357	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "0" "-foreground" "-no-remote" "-profile" "C:\\Users\\Duong\\AppData\\Local\\Temp\\rust_mozprofileB7Mqwc"
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-1627318644749	Marionette	INFO	Listening on port 62014
-1627318645052	Marionette	WARN	TLS certificate errors will be ignored for this session
-1627318645074	Marionette	ERROR	[15] No reply from Marionette:Register
-Jul 26, 2021 12:57:25 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+  <testcase name="testSearchGoogle" classname="TestClass" time="8.796"/>
+  <system-out><![CDATA[>>>actual title: Google
+]]></system-out>
+  <system-err><![CDATA[1642226166080	geckodriver	INFO	Listening on 127.0.0.1:43347
+1642226166192	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "9222" "-foreground" "-no-remote" "-profile" "/var/folders/l4/bn6hxq912kg7_0pc3bwhjrq40000gn/T/rust_mozprofilev4pxSo"
+1642226166465	Marionette	INFO	Marionette enabled
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/l4/bn6hxq912kg7_0pc3bwhjrq40000gn/T/rust_mozprofilev4pxSo/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 243"  data: no]
+DevTools listening on ws://localhost:9222/devtools/browser/049d8e8a-955b-4a96-a868-58ba9608dab2
+1642226167373	Marionette	INFO	Listening on port 53262
+1642226167433	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Jan. 15, 2022 12:56:07 A.M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
+1642226174146	Marionette	INFO	Stopped listening on port 53262
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
 ]]></system-err>
 </testsuite>
