@@ -14,12 +14,6 @@
             <class name="testClasses.GoogleTest"/>
         </classes>
     </test>
-    <test name="test3">
-        <parameter name="browser" value="edge"/>
-        <classes>
-            <class name="testClasses.GoogleTest"/>
-        </classes>
-    </test>
     <listeners>
 <!--        <listener class-name="util.selenium.TestListener"/>-->
     </listeners>
